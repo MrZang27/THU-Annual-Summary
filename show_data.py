@@ -47,7 +47,7 @@ def draw_monthly_trade_amount(df,result_path,year,username):
 # 绘制分地点交易金额柱状图，并去除在线充值的数据
 def draw_location_trade_amount(df,result_path,year,username):
     df_addr = df.groupby('meraddr')['txamt'].sum()
-    #df_addr = df_addr.drop('在线充值')
+    df_addr = df_addr.drop('在线充值')
     df_addr = df_addr.sort_values(ascending=True)
     plt.figure(figsize=(12,len(df_addr)/5))
     # 设置颜色按金额变化
@@ -108,7 +108,7 @@ def draw_hourly_trade_amount_pie(df,result_path,year,username):
 # 绘制分地点交易金额饼图，除去在线充值
 def draw_location_trade_amount_pie(df,result_path,year,username):
     df_addr = df.groupby('meraddr')['txamt'].sum()
-    #df_addr = df_addr.drop('在线充值')
+    df_addr = df_addr.drop('在线充值')
     df_addr = df_addr.sort_values(ascending=True)
 
     plt.figure(figsize=(8,8))
