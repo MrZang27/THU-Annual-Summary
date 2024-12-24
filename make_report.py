@@ -254,7 +254,7 @@ if __name__ == '__main__':
 
     sub_title_3 = f"## 3.午饭\n"
     
-    if lunch_count_int != 0:
+    if lunch_count_int > 1:
         sub_title_3_content = f"""
 {year}年，你在华清大学共吃了 **{lunch_count_int}** 顿午饭，共花费 **{lunch_spent}** 元。\n
     
@@ -315,7 +315,7 @@ if __name__ == '__main__':
 
     sub_title_4 = f"## 4.晚饭\n"
 
-    if dinner_count_int == 0:
+    if dinner_count_int > 1:
         sub_title_4_content = f"""
 {year}年，你在华清大学共吃了 **{dinner_count_int}** 顿晚饭，共花费 **{dinner_spent}** 元。\n
 
@@ -373,7 +373,7 @@ if __name__ == '__main__':
 
     sub_title_5 = f"## 5.宵夜\n"
 
-    if midnight_snack_count_int == 0:
+    if midnight_snack_count_int > 1:
         sub_title_5_content = f"""
 {year}年，你在华清大学共吃了 **{midnight_snack_count_int}** 顿宵夜，共花费 **{midnight_snack_spent}** 元。\n
 
